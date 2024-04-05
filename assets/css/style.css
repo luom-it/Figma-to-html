@@ -7,4 +7,83 @@ html {
 /* khôi phục lại cở chữ ban đầu*/
 body {
   font-size: 1.6rem;
+  /* font sử dụng cho toàn bộ trang */
+  font-family: "Poppins", sans-serif;
+}
+/* ===============common=============== */
+a {
+  text-decoration: none;
+}
+.main-content {
+  width: 1170px;
+  /* cách 2 bên trình duyệt khi thu nhỏ 24px */
+  max-width: calc(100% - 48px);
+  /* căn giữa */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 118px;
+  padding: 0 16px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+/* ===============header=============== */
+.header {
+  background: #fffcf4;
+}
+
+.header.fixed {
+  position: sticky;
+  /* cách top 8px vì trước đã cho cách 36px nên ta dùng -28px */
+  top: -28px;
+}
+
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+.nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+}
+.nav a {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 21px;
+  position: relative;
+}
+.nav li.active a:active,
+.nav a:hover {
+  color: #171100;
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after {
+  /* vì thẻ a là inline nên ko sét được width height */
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  border-radius: 1px;
+  background: #171100;
+}
+.header .btn-sign-up {
+  min-width: 144px;
+}
+.header .action {
+  margin-left: 49px;
 }
