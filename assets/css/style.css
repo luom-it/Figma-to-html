@@ -53,6 +53,21 @@ a {
   opacity: 0.9;
 }
 
+/* hiện dấu 3 chấm sau 1 dòng */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* sử dụng đồng thời 2 class thì thuộc tính sẽ áp dụng */
+.line-clamp.line2 {
+  --line-clamp: 2;
+}
+/* sử dụng để khi ta nghi ngờ người dùng nhập 1 đường link dài thì nó sẽ xuống dòng  */
+.break-all {
+  word-break: break-all;
+}
 /* ===============header=============== */
 .header {
   background: #fffcf4;
@@ -308,6 +323,7 @@ a {
   border-radius: 12px 12px 0px 0px;
 }
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
