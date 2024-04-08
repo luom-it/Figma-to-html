@@ -383,8 +383,14 @@ a {
   padding: 96px 0;
   background: #2e2100;
 }
-.feedback .feedback-item {
+.feedback .feedback-list {
   display: flex;
+  overflow: hidden;
+}
+.feedback .feedback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .feedback-item .avata {
